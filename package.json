@@ -9,10 +9,11 @@
   "author": "Oskar Karlsson <kontakta@oskarkarlsson.nu>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^7.0.18",
     "@types/jest": "^19.2.3",
+    "@types/node": "^7.0.18",
     "jest": "^20.0.0",
     "serverless-offline": "^3.13.5",
+    "simple-spy": "^2.1.0",
     "ts-jest": "^20.0.0",
     "typescript": "^2.3.2"
   },
