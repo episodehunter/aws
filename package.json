@@ -1,0 +1,19 @@
+{
+  "name": "episodehunter-scrobble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hendler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oskar Karlsson <kontakta@oskarkarlsson.nu>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "serverless-webpack": "^1.0.0-rc.4",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1"
+  }
+}
