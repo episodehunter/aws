@@ -1,19 +1,36 @@
 {
-  "name": "episodehunter-scrobble",
+  "name": "episodehunter-aws",
   "version": "1.0.0",
   "description": "",
   "main": "hendler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Oskar Karlsson <kontakta@oskarkarlsson.nu>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^7.0.18",
-    "serverless-webpack": "^1.0.0-rc.4",
-    "ts-loader": "^2.0.3",
-    "tslint": "^5.2.0",
-    "typescript": "^2.3.2",
-    "webpack": "^2.5.1"
+    "@types/jest": "^19.2.3",
+    "jest": "^20.0.0",
+    "serverless-offline": "^3.13.5",
+    "ts-jest": "^20.0.0",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "@episodehunter/datastore": "^1.0.1",
+    "jsonwebtoken": "^7.4.0",
+    "raven": "^1.2.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(src/.*\\.(test|spec))\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testEnvironment": "node"
   }
 }
