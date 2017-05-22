@@ -4,6 +4,7 @@
   "description": "",
   "main": "hendler.js",
   "scripts": {
+    "start": "tsc && serverless offline start",
     "test": "jest"
   },
   "author": "Oskar Karlsson <kontakta@oskarkarlsson.nu>",
