@@ -10,18 +10,18 @@ export const extractUserId = (user: User) => {
   return Number(user.sub);
 };
 
-export const generatePolicy = (principalId: number, resource: any) => {
-  const statementOne = {
-    Action: 'execute-api:Invoke',
-    Effect: 'Allow',
-    Resource: resource
-  };
-  const policyDocument = {
-    Version: 1,
-    Statement: [ statementOne ]
-  };
+export const generatePolicy = (userId: number, resource: string) => {
+  // http://docs.aws.amazon.com/apigateway/latest/developerguide/use-custom-authorizer.html#api-gateway-custom-authorizer-output
   return {
-    principalId,
-    policyDocument
+    principalId: userId,
+    policyDocument: {
+      Version: '2012-10-17',
+      Statement: [{
+        Action: 'execute-api:Invoke',
+        Effect: 'Allow',
+        Resource: resource
+      }]
+    },
+    context: {}
   };
 };
