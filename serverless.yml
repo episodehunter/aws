@@ -1,15 +1,18 @@
 service: episodehunter
 
+custom:
+  stage: "${opt:stage, self:provider.stage}"
+
 provider:
   name: aws
   runtime: nodejs6.10
   stage: dev
   region: us-east-1
+  versionFunctions: false
+  environment: ${file(env.yml):${self:custom.stage}}
 
 plugins:
   - serverless-offline
-
-environment: ${file(environment_${opt:stage}.yml)}
 
 package:
   include:
@@ -17,6 +20,7 @@ package:
     - node_modules/**
   exclude:
     - src/**
+    - env.yml
 
 functions:
   ping:
