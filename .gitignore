@@ -10,3 +10,4 @@ jspm_packages
 
 environment_*.yml
 dist
+env.yml
